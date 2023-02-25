@@ -1,0 +1,195 @@
+
+  
+   /*Bus Ticket Reservation in java programing........*/
+
+   import java.util.Scanner;
+   public class Bus {
+	 static public void main(String... n)
+	{
+		 int n1;
+		do {
+		System.out.println("WELCOME TO BUS RESITRATION CENTER  :\n PLEASE FOLLOW THE INSTRUCTION :");
+		System.out.println("1 : AC_BUS RESERVATION :");
+		System.out.println("2 : NON_AC_BUS RESERVATION :");
+		System.out.println("3 : BUS_AVAILABLITY :");
+		customer1 c=new customer1();
+		Scanner r=new Scanner(System.in);
+		System.out.println("Enter your choice according to above option  :");
+		int ch=r.nextInt();
+		switch(ch)
+		{		
+		case 1:c.AC_BUS();
+		break;
+		case 2:c.NON_AC_BUS();
+		break;
+		case 3:c.BUS_AVAILABLITY();
+		break;
+		default :System.out.println("Sorry! wrong choice :");
+	    }	
+		System.out.println("if wanna more opration to book another one ticket :");
+		n1=r.nextInt();
+		}
+		while(n1==1);
+}
+   }
+ class customer1
+ 
+ {
+	private String date1="00-00-0000";
+	private int bus_no1=0;
+	//private String identity="";
+	int n,i;
+	
+	public void AC_BUS()
+	{
+		Scanner s=new Scanner(System.in);
+//		System.out.println("Enter your identity card :");
+//		identity=s.next();
+		System.out.println("Enter the key for reservation :");
+		int p=s.nextInt();
+		if(p==1990)
+		{
+			System.out.println("enter no of passenger those wants to book_bus ticket :");
+			int n=s.nextInt();
+			for(i=0;i<n;i++) 
+			{	
+			System.out.println("Enter the passenger name :");
+			System.out.println("Enter the email :");
+			System.out.println("Enter the starting_journey :");
+			System.out.println("Enter the depart_journey :");
+			System.out.println("Enter the journey_date :");
+			System.out.println("Enter the bus_no :");
+		
+			while(s.hasNext())
+			{
+			
+			String name=s.next();				
+			String email=s.next();			
+			String s_journey=s.next();			
+			String d_journey=s.next();			
+			String date=s.next();			
+			int bus_no=s.nextInt();			
+			date1=date1+date;
+			bus_no1=bus_no1+bus_no;
+			
+            System.out.println(" HERE Your AC_bus ticket information :-");
+            System.out.println("----------------------------------------------------------------------------------------");            
+			System.out.format("%-18s  %15s  %10s  %15s  %10s %14s","PASSENGER_NAME","EMAIL","From-to","Depart","Date","bus_no\n");
+			System.out.println("----------------------------------------------------------------------------------------");
+			System.out.format("%-18s  %15s  %10s  %15s  %11s  %14s",name,email,s_journey,d_journey,date,bus_no);
+			
+			}			
+	      }					
+		}
+		
+		else
+		{
+			System.out.println("sorry! Check entered number carefully :");
+		}
+   }
+	
+	public void NON_AC_BUS()
+	{
+		Scanner s=new Scanner(System.in);
+//		System.out.println("Enter your identity card :");
+//		identity=s.next();
+		System.out.println("Enter the key for reservation :");
+		int p=s.nextInt();
+		if(p==1990)
+		{
+			System.out.println("enter no of passenger those wants to book_bus ticket :");
+			int n=s.nextInt();
+			for(i=0;i<n;i++) 
+			{	
+			System.out.println("Enter the passenger name :");
+			System.out.println("Enter the email :");
+			System.out.println("Enter the starting_journey :");
+			System.out.println("Enter the depart_journey :");
+			System.out.println("Enter the journey_date :");
+			System.out.println("Enter the bus_no :");
+		
+			while(s.hasNext())
+			{
+			
+			String name=s.next();				
+			String email=s.next();			
+			String s_journey=s.next();			
+			String d_journey=s.next();			
+			String date=s.next();			
+			int bus_no=s.nextInt();			
+			date1=date1+date;
+			bus_no1=bus_no1+bus_no;
+			
+            System.out.println("Your NON_AC_bus ticket information :-");
+			
+			System.out.format("%-18s %15s %10s %15s %10s %14s","PASSENGER_NAME","EMAIL","From-to","Depart","Date","bus_no\n");
+			System.out.println("----------------------------------------------------------------------------------------");
+			System.out.format("%-18s %15s %10s %15s %10s %14s",name,email,s_journey,d_journey,date,bus_no);	         
+			}			
+	      }					
+		}
+		
+		else
+		{
+			System.out.println("sorry! Check entered number carefully :");
+		}
+   }
+	
+	public void BUS_AVAILABLITY()
+	{
+		Scanner s=new Scanner(System.in);
+//		System.out.println("Enter your identity card :");
+//		identity=s.next();
+		System.out.println("Enter the key for reservation :");
+		int p=s.nextInt();
+		if(p==1990)
+		{
+			System.out.println("enter no of passenger those wants to book_bus ticket :");
+			int n=s.nextInt();
+			if(n>5)
+			{
+				System.out.println("Sorry! ticket is not available\n check the another bus :");
+			}
+			else
+			{
+			for(i=0;i<n;i++) 
+			{	
+			System.out.println("Enter the passenger name :");
+			System.out.println("Enter the email :");
+			System.out.println("Enter the starting_journey :");
+			System.out.println("Enter the depart_journey :");
+			System.out.println("Enter the journey_date :");
+			System.out.println("Enter the bus_no :");
+		
+			while(s.hasNext())
+			{
+			
+			String name=s.next();				
+			String email=s.next();			
+			String s_journey=s.next();			
+			String d_journey=s.next();			
+			String date=s.next();			
+			int bus_no=s.nextInt();			
+			date1=date1+date;
+			bus_no1=bus_no1+bus_no;
+			
+            System.out.println("Your bus ticket information :-");
+			
+			System.out.format("%-18s %15s %10s %15s %10s %14s","PASSENGER_NAME","EMAIL","From-to","Depart","Date","bus_no\n");
+			System.out.println("----------------------------------------------------------------------------------------");
+			System.out.format("%-18s %15s %10s %12s %10s %14s",name,email,s_journey,d_journey,date,bus_no);	
+          
+			}
+			
+	      }
+		}			
+	}
+			
+		else
+		{
+			System.out.println("sorry! Check entered number carefully :");
+		}
+   }
+	
+}
+   
